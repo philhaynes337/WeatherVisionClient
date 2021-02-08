@@ -1,0 +1,12 @@
+.navbar {
+    color: black;
+    font-size: 25px;
+    border-style: solid;
+    border-color: black;
+}
+
+.centerit {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
