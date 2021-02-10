@@ -1,4 +1,5 @@
 import react, { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
 import './Nav.css';
 
 class Nav extends Component {
@@ -6,7 +7,7 @@ class Nav extends Component {
         return (
             <nav>
                 <div className='navbar centerit'>
-                    Home Page | About | Demo | Login | Sign-Up
+                    <Link to ='/'>Home Page</Link> | <Link to='/about'>About</Link> | <Link to='/demo'>Demo</Link> | <Link to='/login'>Login</Link> | <Link to='/create'>Sign-Up</Link>
                 </div>
                 
             </nav>
