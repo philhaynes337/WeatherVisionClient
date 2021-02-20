@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DemoMenu from '../DemoMenu/DemoMenu';
 import './Demo.css';
 
 class Demo extends Component {
@@ -6,6 +7,7 @@ class Demo extends Component {
         return (
             <div>
                 Demo Component
+                <DemoMenu />
             </div>
         )
     }

@@ -9,19 +9,19 @@ class Login extends Component {
                     <section>
                         Login:
                         <div>
-                            <label for='username'>
+                            <label htmlFor='username'>
                                 Username:
                             </label>
                             <input type='text' id='username' name='username' />
                         </div>
                         <div>
-                            <label for='password'>
+                            <label htmlFor='password'>
                                 Password:
                             </label>
                             <input type='text' id='password' name='password' />
                         </div>
                         <div>
-                            <input type='submit' value='Submit' />
+                        <button type='submit'>Login</button>
                         </div>
                     </section>
                 </form>

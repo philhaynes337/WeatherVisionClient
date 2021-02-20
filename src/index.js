@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
-      <App />
+      	<App />
       <Footer />
     </BrowserRouter>
   </React.StrictMode>,
