@@ -3,6 +3,7 @@ import './Create.css';
 import ApiContext from '../ApiContext';
 import ApiConfig from '../ApiConfig';
 
+
 class Create extends Component {
     static contextType = ApiContext;
         state = {
@@ -11,14 +12,13 @@ class Create extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const { firstname, lastname, username, zipcode, userpassword } = e.target
+        const { user_email, user_name, user_password } = e.target
 
         const user = {
-            username: username.value,
-            userpassword: userpassword.value,
-            zipcode: zipcode.value,
-            firstname: firstname.value,
-            lastname: lastname.value
+            user_email: user_email.value,
+            user_password: user_password.value,
+            user_name: user_name.value,
+
 
 
         }
@@ -27,12 +27,12 @@ class Create extends Component {
 
         this.setState({ error: null })
 
-        fetch(`${ApiConfig.API_ENDPOINT}/users`, {
+        fetch(`${ApiConfig.API_ENDPOINT}/register`, {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
                 'content-type': 'application/json',
-                'Authorization': 'Bearer 2f5e6320-6c04-11eb-9439-0242ac130002',
+                'Authorization': `Bearer ${ApiConfig.API_KEY}`,
             }
         })
 
@@ -46,11 +46,9 @@ class Create extends Component {
         })
 
         .then (data => {
-            username.value = ''
-            userpassword.value = ''
-            zipcode.value = ''
-            firstname.value = ''
-            lastname.value = ''
+            user_name.value = ''
+            user_password.value = ''
+            user_email.value = ''
 
             this.context.addUser(data)
 
@@ -78,34 +76,23 @@ class Create extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <section>
                         <div>
-                            <label htmlFor='firstname'>
-                                First Name:
+                            <label htmlFor='user_email'>
+                                E-Mail:
                             </label>
-                            <input type='text' name='firstname' id='firstname' defaultValue='First Name' required />
+                            <input type='text' name='user_email' id='user_email' defaultValue='E-Mail' required />
                         </div>
+                       
                         <div>
-                            <label htmlFor='lastname'>
-                                Last Name:
-                            </label>
-                            <input type='text' name='lastname' id='lastname' defaultValue='Last Name' required />
-                        </div>
-                        <div>
-                            <label htmlFor='username'>
+                            <label htmlFor='user_name'>
                                 User Name:
                             </label>
-                            <input type='text' name='username' id='username' defaultValue='User Name' required />
+                            <input type='text' name='user_name' id='user_name' defaultValue='User Name' required />
                         </div>
                         <div>
-                            <label htmlFor='userpassword'>
+                            <label htmlFor='user_password'>
                                 Password:
                             </label>
-                            <input type='text' name='userpassword' id='userpassword' defaultValue='Password' required />
-                        </div>
-                        <div>
-                            <label htmlFor='zipcode'>
-                                Zip Code:
-                            </label>
-                            <input type='text' name='zipcode' id='zipcode' defaultValue='76052' required />
+                            <input type='text' name='user_password' id='user_password' defaultValue='Password' required />
                         </div>
                         <div>
                             <button type='submit'>Create User</button>

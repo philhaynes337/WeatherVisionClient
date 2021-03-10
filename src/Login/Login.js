@@ -12,11 +12,6 @@ class Login extends Component {
 
     state = { error: null};
 
-    // handleLogin = () => {
-    //     const { location, history } = this.props
-    //     const destination = (location.state || {}).from || '/'
-    //     history.push(destination)
-    // }
 
     handSubmitTokenAuth = e => {
         e.preventDefault();

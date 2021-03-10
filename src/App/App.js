@@ -35,13 +35,13 @@ class App extends Component {
         App Component
         
         <Switch>
-          <PublicOnlyRoute exact path='/' component={Home} />
-          <PublicOnlyRoute path='/about' component={About} />
-          <PublicOnlyRoute path='/demo' component={Demo} />
-          <PublicOnlyRoute path='/login' component={Login} />
-          <PublicOnlyRoute path='/create' component={Create} />
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/demo' component={Demo} />
+          <Route path='/login' component={Login} />
+          <Route path='/create' component={Create} />
           <PrivateRoute path='/weathervision' component={WeatherVision} />
-          <PublicOnlyRoute component={NotFound} />
+          <Route component={NotFound} />
 
         </Switch>
         
