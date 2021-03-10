@@ -3,10 +3,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import About from '../About/About'; 
 import Home from '../Home/Home';
 import Demo from '../Demo/Demo';
-import Login from '../Login/Login';
+import Login from '../Login/LoginPage';
 import Create from '../Create/Create';
 import NotFound from '../NotFound/NotFound';
+import WeatherVision from '../WeatherVision/WeatherVision'
 import ApiContext from '../ApiContext';
+import PrivateRoute from '../utils/PrivateRoute';
+import PublicOnlyRoute from '../utils/PublicOnlyRoute';
 import ApiConfig from '../ApiConfig';
 import './App.css';
 
@@ -15,30 +18,6 @@ class App extends Component {
     users: []
   };
 
-  componentDidMount() {
-    Promise.all([
-      fetch(`${ApiConfig.API_ENDPOINT}/users`, {
-        method: 'GET',
-        //body: JSON.stringify(users),
-        headers: {
-          'content-type': 'application/json',
-          'Authorization': 'Bearer 2f5e6320-6c04-11eb-9439-0242ac130002',
-        }
-      })
-    ])
-      .then(([usersRes]) => {
-        if (!usersRes.ok)
-          return usersRes.json().then(e => Promise.reject(e));
-        
-        return Promise.all([usersRes.json()]);
-      })
-      .then(([users]) => {
-        this.setState({users});
-      })
-      .catch(error => {
-        console.error({error});
-      })
-  }
 
   addUser = user => {
     this.setState({
@@ -48,9 +27,6 @@ class App extends Component {
 
 
   render() {
-   // const values = {
-   //   users: this.state.users
-   // }
 
     return (
       <>
@@ -59,12 +35,14 @@ class App extends Component {
         App Component
         
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/demo' component={Demo} />
-          <Route path='/login' component={Login} />
-          <Route path='/create' component={Create} />
-          <Route component={NotFound} />
+          <PublicOnlyRoute exact path='/' component={Home} />
+          <PublicOnlyRoute path='/about' component={About} />
+          <PublicOnlyRoute path='/demo' component={Demo} />
+          <PublicOnlyRoute path='/login' component={Login} />
+          <PublicOnlyRoute path='/create' component={Create} />
+          <PrivateRoute path='/weathervision' component={WeatherVision} />
+          <PublicOnlyRoute component={NotFound} />
+
         </Switch>
         
       </div>
