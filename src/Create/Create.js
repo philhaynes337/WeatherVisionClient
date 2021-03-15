@@ -23,9 +23,9 @@ class Create extends Component {
 
         }
 
-        console.log('User Information:' + user)
 
         this.setState({ error: null })
+        console.log(JSON.stringify(user))
 
         fetch(`${ApiConfig.API_ENDPOINT}/register`, {
             method: 'POST',
@@ -52,7 +52,7 @@ class Create extends Component {
 
             this.context.addUser(data)
 
-            console.log('Data is ' + data)
+            //console.log('Data is ' + data)
         })
 
         .catch (error => {
@@ -63,10 +63,6 @@ class Create extends Component {
 
 
     }
-
-//handleChange(e) {
-  //  this.setState({value: e.target.value});
-//}
 
 
 

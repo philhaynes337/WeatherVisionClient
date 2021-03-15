@@ -10,23 +10,34 @@ class Login extends Component {
         onLoginSuccess: () => {}
     };
 
-    state = { error: null};
+    state = { 
+        error: null,
+        user_name: [],
+    };
 
 
     handSubmitTokenAuth = e => {
         e.preventDefault();
-        console.log('HandSubmit Clicked')
-        this.setState({ error: null });
-        const { user_email, user_password } = e.target;
+
+        sessionStorage.clear(); 
+
+        this.setState({ 
+            error: null,
+           
+        });
+
+        const { user_name, user_password } = e.target;
 
         AuthService.postLogin({
-            user_email: user_email.value,
+            user_name: user_name.value,
             user_password: user_password.value
         })
         .then(res => {
-            user_email.value = "";
+            
             user_password.value = "";
             TokenService.saveAuthToken(res.authToken);
+            window.sessionStorage.setItem('user', user_name.value);
+            
             this.props.onLoginSuccess();
             
         })
@@ -48,16 +59,16 @@ class Login extends Component {
                     <section>
                         Login:
                         <div>
-                            <label htmlFor='user_email'>
-                                E-Mail:
+                            <label htmlFor='user_name'>
+                                User Name:
                             </label>
-                            <input type='text' id='user_email' name='user_email' />
+                            <input type='text' id='user_name' name='user_name' />
                         </div>
                         <div>
                             <label htmlFor='user_password'>
                                 Password:
                             </label>
-                            <input type='text' id='user_password' name='user_password' />
+                            <input type='password' id='user_password' name='user_password' />
                         </div>
                         <div>
                         <button type='submit'>Login</button>

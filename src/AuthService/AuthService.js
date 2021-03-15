@@ -2,7 +2,7 @@ import config from "../ApiConfig";
 
 const AuthService = {
   postLogin(credentials) {
-      console.log(credentials);
+      //console.log(credentials);
     return fetch(`${config.API_ENDPOINT}/login`, {
       method: "POST",
       headers: {
@@ -25,7 +25,21 @@ const AuthService = {
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
-  }
+  },
+  getUserId() {
+    return fetch(`${config.API_ENDPOINT}/loggedin/test`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+        "Authorization": `Bearer ${config.API_KEY}`
+      },
+
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+        
+
+  },
 };
 
 export default AuthService;
