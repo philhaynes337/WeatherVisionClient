@@ -6,7 +6,10 @@ import Demo from '../Demo/Demo';
 import Login from '../Login/LoginPage';
 import Create from '../Create/Create';
 import NotFound from '../NotFound/NotFound';
-import WeatherVision from '../WeatherVision/WeatherVision'
+import WeatherVision from '../WeatherVision/WeatherVision';
+import AddObs from '../WeatherVision/files/AddObs';
+import EditObs from '../WeatherVision/files/EditObs';
+import DeleteObs from '../WeatherVision/files/DeleteObs';
 import ApiContext from '../ApiContext';
 import PrivateRoute from '../utils/PrivateRoute';
 import PublicOnlyRoute from '../utils/PublicOnlyRoute';
@@ -41,6 +44,9 @@ class App extends Component {
             <Route path='/login' component={Login} />
             <Route path='/create' component={Create} />
             <PrivateRoute path='/weathervision' component={WeatherVision} />
+            <PrivateRoute path='/addobs' component={AddObs} />
+            <PrivateRoute path='/editobs' component={EditObs} />
+            <PrivateRoute path='/deleteobs' component={DeleteObs} />
             <Route component={NotFound} />
 
           </Switch>
