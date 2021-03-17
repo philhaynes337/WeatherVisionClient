@@ -31,21 +31,21 @@ class App extends Component {
     return (
       <>
       <ApiContext.Provider>
-      <div className='app'>
-        App Component
+        <div className='app'>
         
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/demo' component={Demo} />
-          <Route path='/login' component={Login} />
-          <Route path='/create' component={Create} />
-          <PrivateRoute path='/weathervision' component={WeatherVision} />
-          <Route component={NotFound} />
+          
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/demo' component={Demo} />
+            <Route path='/login' component={Login} />
+            <Route path='/create' component={Create} />
+            <PrivateRoute path='/weathervision' component={WeatherVision} />
+            <Route component={NotFound} />
 
-        </Switch>
-        
-      </div>
+          </Switch>
+          
+        </div>
       </ApiContext.Provider>
       </>
     )
