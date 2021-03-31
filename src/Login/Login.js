@@ -55,6 +55,9 @@ class Login extends Component {
         const { error } = this.state;
         return (
             <div>
+                <p>
+                    {error}
+                </p>
                 <form onSubmit={this.handSubmitTokenAuth}>
                     <section>
                         Login:

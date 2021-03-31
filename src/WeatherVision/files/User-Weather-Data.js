@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import DeleteObs from './DeleteObs';
+import EditObs from './EditObs';
+import './css/UWO.css'
 
 
 
@@ -23,7 +25,10 @@ class UserWeatherData extends Component {
 
         const showData = userData.map(data => {
             return(
-                <div key={data.id} className='row obsbox'>
+                
+                <div key={data.id}>
+                    <div className='row obsbox'>
+                    
                     <div className='colum'>
                         {data.obs_date_time}
                     </div>
@@ -51,6 +56,17 @@ class UserWeatherData extends Component {
                     <div className='colum'>
                         {data.remarks}
                     </div>
+                    
+
+                </div>
+                <div className='row obsbox'>
+                    <div className='colum'>               
+                        <DeleteObs id={data.id} />
+                    </div>
+                    <div className='colum'>
+                        <EditObs id={data.id} />
+                    </div>
+                </div>
                 </div>
             )
         })

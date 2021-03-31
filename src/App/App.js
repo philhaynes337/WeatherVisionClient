@@ -18,16 +18,23 @@ import './App.css';
 
 class App extends Component {
   state = {
-    users: []
+    users: [],
+    userEmail: [],
   };
 
 
   addUser = user => {
     this.setState({
-      users: [ ...this.state.users, user]
+      users: [ ...this.state.users, user],
+
     })
   };
 
+  userEmail = userData => {
+    this.setState({
+      userEmail: [ ...this.state.userEmail, userData]
+    })
+  };
 
   render() {
 
@@ -46,7 +53,7 @@ class App extends Component {
             <PrivateRoute path='/weathervision' component={WeatherVision} />
             <PrivateRoute path='/addobs' component={AddObs} />
             <PrivateRoute path='/editobs' component={EditObs} />
-            <PrivateRoute path='/deleteobs' component={DeleteObs} />
+           
             <Route component={NotFound} />
 
           </Switch>

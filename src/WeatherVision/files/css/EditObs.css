@@ -1,0 +1,33 @@
+.noShow {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+.centerit {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.colum {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    width: 60px;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+}
+
+.obsbox {
+    width: auto;
+}

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import config from '../ApiConfig';
 import UserWeatherData from './files/User-Weather-Data';
 import WvMenu from './files/WvMenu';
+import ApiContext from '../ApiContext'
 
 // Weather API Web Address
 // https://avwx.docs.apiary.io/#
@@ -66,6 +67,8 @@ class WeatherVision extends Component {
     render() {
 
  const { userData, userEmail, userId, userName } = this.state
+
+ window.sessionStorage.setItem('userEmail', userEmail)
 
         return(
             <div>

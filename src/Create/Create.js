@@ -25,7 +25,7 @@ class Create extends Component {
 
 
         this.setState({ error: null })
-        console.log(JSON.stringify(user))
+       
 
         fetch(`${ApiConfig.API_ENDPOINT}/register`, {
             method: 'POST',
@@ -50,13 +50,13 @@ class Create extends Component {
             user_password.value = ''
             user_email.value = ''
 
-            this.context.addUser(data)
+            //this.context.addUser(data)
 
             //console.log('Data is ' + data)
         })
 
         .catch (error => {
-            console.log(error)
+            //console.log(error)
             this.setState({error})
         })
         this.props.history.push('/login')

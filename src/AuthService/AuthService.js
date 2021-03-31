@@ -2,7 +2,7 @@ import config from "../ApiConfig";
 
 const AuthService = {
   postLogin(credentials) {
-      //console.log(credentials);
+      //console.log();
     return fetch(`${config.API_ENDPOINT}/login`, {
       method: "POST",
       headers: {
