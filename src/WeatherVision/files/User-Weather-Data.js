@@ -29,31 +29,31 @@ class UserWeatherData extends Component {
                 <div key={data.id}>
                     <div className='row obsbox'>
                     
-                    <div className='colum'>
+                    <div className='colum obsbox-2'>
                         {data.obs_date_time}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-2'>
                         {data.icao}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-3'>
                         {data.wind}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-1'>
                         {data.vis}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-4'>
                         {data.clouds}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-4'>
                         {data.wx}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-1'>
                         {data.tmp}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-1'>
                         {data.dp}
                     </div>
-                    <div className='colum'>
+                    <div className='colum obsbox-4'>
                         {data.remarks}
                     </div>
                     
@@ -73,7 +73,7 @@ class UserWeatherData extends Component {
 
         return(
             <div>
-                User Weather Component
+                
                 <br></br>
                 
                     {showData}

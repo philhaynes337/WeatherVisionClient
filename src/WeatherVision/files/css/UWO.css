@@ -9,7 +9,8 @@
     flex-direction: column;
     border-style: solid;
     border-color: black;
-    width: auto;
+
+    
 
 }
 
@@ -19,8 +20,28 @@
     border-style: solid;
     border-color: black;
     width: auto;
+    border: 2px;
 }
 
 .obsbox {
-    width: auto;
+    width: 590px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.obsbox-1 {
+    width: 40px;
+
+}
+
+.obsbox-2 {
+    width: 80px;
+
+}
+.obsbox-3 {
+    width: 90px;
+
+}
+.obsbox-4 {
+    width: 85px;
 }

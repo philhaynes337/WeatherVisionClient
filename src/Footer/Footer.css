@@ -2,4 +2,8 @@
     border-style: solid;
     border-color: black;
     text-align: center;
+    color: #FFFFFF;
+    background-color: #315FDE;
+    margin: 5px;
+    border-radius: 25px;
 }

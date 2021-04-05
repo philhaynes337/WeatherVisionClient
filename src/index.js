@@ -5,14 +5,16 @@ import App from './App/App';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import {BrowserRouter} from 'react-router-dom';
-//import WvProvider from './contexts/wvcontext';
+import Nav from './Nav/Nav';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       
         <Header />
-          <App />
+          <Nav />
+           <App />
         <Footer />
       
     </BrowserRouter>

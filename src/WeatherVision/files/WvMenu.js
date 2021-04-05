@@ -8,8 +8,8 @@ class WvMenu extends Component {
 
         return(
             <div>
-                <Link to={'/weathervision'}>Observations</Link> | 
-                <Link to={'/addobs'}> Add</Link>
+                <Link to={'/weathervision'}>View Observations</Link> | 
+                <Link to={'/addobs'}> Add New</Link>
                 <Logout />
             </div>
         )

@@ -145,7 +145,10 @@ const showUpdateButton = this.state.updateButton;
                          </div>
                         <div>
                                 <button type='submit'>Submit to Server</button>
-                                <button onClick={this.handleCancel}>Cancel</button>
+                                
+                                <form>
+                                <button type='cancel' onClick={this.handleCancel}>Cancel</button>
+                                </form>
                         </div>
                         </div>
                    </form>

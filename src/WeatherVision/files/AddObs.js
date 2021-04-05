@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WvMenu from './WvMenu';
 import config from '../../ApiConfig';
+import './css/AddObs.css';
 
 
 class AddObs extends Component {
@@ -10,6 +11,7 @@ class AddObs extends Component {
             error: null,
             userEmail: [],
             added: '',
+            addedClass: '',
         }
     }
 
@@ -64,12 +66,14 @@ class AddObs extends Component {
         .catch (error => {
             console.log(error)
             this.setState({
-                added: 'Problem Adding Observation'
+                added: 'Problem Adding Observation',
+                addedClass: 'addobs-c'
             })
         })
    
         this.setState({
-            added: 'Observation Added'
+            added: 'Observation Added',
+            addedClass: 'addobs-b'
         })
     }
 
@@ -78,16 +82,17 @@ class AddObs extends Component {
 
         //console.log(this.state)
         const showAddedObs = this.state.added
+        const addedClass = this.state.addedClass
 
         return(
             <div>
                 <div>
                     <WvMenu />
                 </div>
-                <div>
+                <div className={addedClass}>
                     {showAddedObs}
                 </div>
-                <div>
+                <div className='addobs-a'>
                     <form onSubmit={this.AddObsBtn}>
 
                         <div>

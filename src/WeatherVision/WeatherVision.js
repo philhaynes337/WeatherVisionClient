@@ -72,10 +72,10 @@ class WeatherVision extends Component {
 
         return(
             <div>
-                Weather Vision Component <br />
+                <h2>Welcome {userName}!</h2>
                 <WvMenu />
                 <br />
-                <h3>Welcome {userName}</h3>
+                
                 
                     <UserWeatherData userData={this.state.userData} />
                     

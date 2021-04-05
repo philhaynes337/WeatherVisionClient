@@ -1,9 +1,12 @@
 header {
-    color: black;
+    color: #FFFFFF;
     font-family: 'Wallpoet', cursive;
     font-size: 60px;   
     border-style: solid;
     border-color: black;
+    background-color: #315FDE;
+    margin: 5px;
+    border-radius: 25px;
 
 }
 
@@ -12,3 +15,9 @@ header {
 	margin: 0 auto;
 	text-align: center;
 }
+@media only screen and (min-width: 600px) {
+    header, main, footer {
+      width: auto;
+      padding: 0px
+    }
+  }

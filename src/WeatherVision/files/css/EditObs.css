@@ -4,6 +4,7 @@
 
 .show {
     display: inline;
+    width: 200px;
 }
 .centerit {
 	display: block;
@@ -30,4 +31,8 @@
 
 .obsbox {
     width: auto;
+}
+
+.updateTable {
+    width: 200px;
 }
