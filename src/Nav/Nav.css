@@ -1,54 +1,153 @@
-
-/*.nav-a {
-    width: 599px;
+.navBox {
+    margin: auto;
+    min-width: 600px;
+    width: auto;
     background-color: #315FDE;
-    height: 45px;
 }
-*/
 
+
+
+
+.navShow-a {
+    display: none;
+}
+
+.navShow-b {
+
+    display: inline;
+    float: left;
+    position: relative;
+
+}
+.navShow-b1f {
+    float: right;
+}
+
+.navimg {
+    height: 50px;
+    width: 50px;
+}
+
+
+span {
+
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+
+}
+
+.menuBtn {
+    border-color: #000000;
+    border-style: none;
+    border-width: 2px;    
+    background: #315FDE;
+    color: #FFFFFF;
+    font: bold 20px/24px sans-serif;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+
+}
+
+.navShow-b1 {
+    display: none;
+    position: fixed;
+    background-color:  #80879C;
+    min-width: 160px;
+    padding: 5px 10px;
+    z-index: 1;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+}
+
+.navShow-b:hover .navShow-b1 {
+    display: block;
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #315FDE;
-}
-
-li {
-    float: left;
-}
-
-/*li {
-    color: black;
-    font-size: 25px;
-    background-color: #315FDE;
-    float: left;
-    height: auto;
-    list-style: none;
+    background-color: #80879C;
 
 }
-*/
 
+.menubg {
+    background: #315FDE;
+}
 
 li a {
     background: #315FDE;
     color: #FFFFFF;
     display: block;
-    font: bold 12px/20px sans-serif;
+    font: bold 20px/26px sans-serif;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
 
 }
 
 li:hover a {
     background: #374F91;
-    font: bold 13px/21px sans-serif;
+    font: bold 18px/22px sans-serif;
 }
 
-.nav-b {
-    float: right;
+
+@media only screen and (min-width: 601px) {
+    .navShow-a {
+        display: block;
+    }
+    .navShow-b {
+        display: none;
+    }
+
+    
+     li {
+        float: left;
+    } 
+
+    ul {
+        background-color: #315FDE;
+    }
+    
+    
+    
+     li a {
+    border-color: #000000;
+    border-style: none;
+    border-width: 0px;
+    border-radius: 0px;
+    font: bold 14px/20px sans-serif;
+    
+    } 
+    
+/*     li:hover a {
+        background: #374F91;
+        font: bold 13px/21px sans-serif;
+    } */
+    
+    .nav-b {
+        float: right;
+    }
+
+
 }
 
 
