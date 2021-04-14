@@ -8,9 +8,9 @@ API
 ---------------
 Screenshots
 ---------------
-![Main Page](/pics/main.jpg)
-![Added Observation](/pics/addedob.jpg)
-![Weather Vision Main Page](/pics/loggedin.jpg)
+![Main Page](./pics/main.jpg)
+![Added Observation](./pics/addedob.jpg)
+![Weather Vision Main Page](./pics/loggedin.jpg)
 ---------------
 Summary
 ---------------
