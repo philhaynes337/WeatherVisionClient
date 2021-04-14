@@ -4,6 +4,11 @@ Weather Vision
 ---------------
 API
 ---------------
+Demo User Info
+---------------
+Username: demome
+Password: demo
+---------------
 [Click Here](https://github.com/philhaynes337/BEAC3 "Back End Documentation") to see the API documentation.
 ---------------
 Screenshots
@@ -19,3 +24,4 @@ This app was created to allow weather enthusiasts to document their own observat
 Technology Used
 ---------------
 This app was created using JavaScript, CSS, and ReactJS.
+---------------
