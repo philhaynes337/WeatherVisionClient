@@ -8,9 +8,9 @@ API
 ---------------
 Screenshots
 ---------------
-![Main Page](./pics/main.jpg)
-![Added Observation](./pics/addedob.jpg)
-![Weather Vision Main Page](./pics/loggedin.jpg)
+![Main Page](https://github.com/philhaynes337/WeatherVisionClient/blob/fee614a469ff20c452c81292e15dbb4f0a175cb3/pics/main.JPG)
+![Added Observation](https://github.com/philhaynes337/WeatherVisionClient/blob/fee614a469ff20c452c81292e15dbb4f0a175cb3/pics/addedob.JPG)
+![Weather Vision Main Page](https://github.com/philhaynes337/WeatherVisionClient/blob/fee614a469ff20c452c81292e15dbb4f0a175cb3/pics/loggedin.JPG)
 ---------------
 Summary
 ---------------
