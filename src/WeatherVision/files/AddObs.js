@@ -36,13 +36,8 @@ class AddObs extends Component {
 
         }
         
-
-
         const userinfo = window.sessionStorage.getItem('user')
         const userUrl = `${config.API_ENDPOINT}/loggedin/${userinfo}/addobs`
-
-        //console.log(userUrl)
-        //console.log(`Bearer ${config.API_KEY}`)
 
         const options = {
             method: 'POST',
@@ -80,7 +75,6 @@ class AddObs extends Component {
 
     render() {
 
-        //console.log(this.state)
         const showAddedObs = this.state.added
         const addedClass = this.state.addedClass
 

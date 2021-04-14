@@ -19,8 +19,7 @@ class DeleteObs extends Component {
 
     DeleteObsBtn = e => {
         e.preventDefault();
-        //const { id } = e.target;
-
+  
         const data = {
             id: this.props.id,
             user: window.sessionStorage.getItem('user'),
