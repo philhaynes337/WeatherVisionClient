@@ -4,7 +4,7 @@ Weather Vision
 ---------------
 API
 ---------------
-[Click Here](https://github.com/philhaynes337/BEAC3 "Back End Documentation")to see the API documentation.
+[Click Here](https://github.com/philhaynes337/BEAC3 "Back End Documentation") to see the API documentation.
 ---------------
 Screenshots
 ---------------
