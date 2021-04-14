@@ -36,3 +36,18 @@
 .updateTable {
     width: 200px;
 }
+
+.showStyle {
+    width: 200px;
+}
+
+.submitServer {
+    width: 250px;
+    float: right;
+}
+
+.submitCancel {
+    width: 250px;
+    padding: 5px;
+    float: right;
+}

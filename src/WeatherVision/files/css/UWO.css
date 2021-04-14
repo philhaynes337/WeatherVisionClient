@@ -7,10 +7,7 @@
 .colum {
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-color: black;
-
-    
+ 
 
 }
 
@@ -21,6 +18,11 @@
     border-color: black;
     width: auto;
     border: 2px;
+}
+
+.row-nb {
+    display: flex;
+    flex-direction: row;
 }
 
 .obsbox {
@@ -44,4 +46,12 @@
 }
 .obsbox-4 {
     width: 85px;
+}
+.delObs {
+    width: 100px;
+    padding: 5px;
+}
+.editObs {
+    width: 490px;
+    padding: 5px;
 }

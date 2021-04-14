@@ -59,11 +59,11 @@ class UserWeatherData extends Component {
                     
 
                 </div>
-                <div className='row obsbox'>
-                    <div className='colum'>               
+                <div className='row-nb obsbox'>
+                    <div className='colum delObs'>               
                         <DeleteObs id={data.id} />
                     </div>
-                    <div className='colum'>
+                    <div className='colum editObs'>
                         <EditObs id={data.id} />
                     </div>
                 </div>

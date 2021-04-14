@@ -1,0 +1,9 @@
+.wvMenuText {
+    font-weight: bold;
+    border-radius: 25px;
+    width: 450px;
+}
+
+.wvLogout {
+    float: right;
+}

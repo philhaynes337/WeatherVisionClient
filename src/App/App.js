@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import About from '../About/About'; 
 import Home from '../Home/Home';
-import Demo from '../Demo/Demo';
 import Login from '../Login/LoginPage';
 import Create from '../Create/Create';
 import NotFound from '../NotFound/NotFound';
 import WeatherVision from '../WeatherVision/WeatherVision';
 import AddObs from '../WeatherVision/files/AddObs';
 import EditObs from '../WeatherVision/files/EditObs';
-import DeleteObs from '../WeatherVision/files/DeleteObs';
 import ApiContext from '../ApiContext';
 import PrivateRoute from '../utils/PrivateRoute';
-import PublicOnlyRoute from '../utils/PublicOnlyRoute';
-import ApiConfig from '../ApiConfig';
 import './App.css';
 
 class App extends Component {
@@ -40,14 +36,13 @@ class App extends Component {
 
     return (
       <>
-      <ApiContext.Provider>
+      <ApiContext.Provider value=''>
         <div className='app'>
         
-          
+        
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
-            <Route path='/demo' component={Demo} />
             <Route path='/login' component={Login} />
             <Route path='/create' component={Create} />
             <PrivateRoute path='/weathervision' component={WeatherVision} />
@@ -55,7 +50,7 @@ class App extends Component {
             <PrivateRoute path='/editobs' component={EditObs} />
            
             <Route component={NotFound} />
-
+         
           </Switch>
           
         </div>

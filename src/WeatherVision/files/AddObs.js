@@ -95,62 +95,130 @@ class AddObs extends Component {
                 <div className='addobs-a'>
                     <form onSubmit={this.AddObsBtn}>
 
-                        <div>
-                            <label htmlFor='obs_date_time'>
-                                Date / Time: 
-                            </label>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='obs_date_time'>
+                                    Date / Time: 
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='obs_date_time' id='obs_date_time' defaultValue='03/21/2021 05:00PM CST' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='icao'>
-                                Location:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='icao'>
+                                    Location:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='icao' id='icao' defaultValue='KDFW' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='wind'>
-                                Wind:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='wind'>
+                                    Wind:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='wind' id='wind' defaultValue='12005G15KT' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='vis'>
-                                Visibility:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='vis'>
+                                    Visibility:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='vis' id='vis' defaultValue='10SM' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='clouds'>
-                                Clouds:
-                            </label>
+
+  
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='clouds'>
+                                    Clouds:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='clouds' id='clouds' defaultValue='OVC100' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='wx'>
-                                Weather:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='wx'>
+                                    Weather:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='wx' id='wx' defaultValue='HZ' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='tmp'>
-                                Temperature:
-                            </label>
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='tmp'>
+                                    Temperature:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='tmp' id='tmp' defaultValue='10' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='dp'>
-                                Dew Point:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='dp'>
+                                    Dew Point:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='dp' id='dp' defaultValue='09' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='remarks'>
-                                Remarks:
-                            </label>
+
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='remarks'>
+                                    Remarks:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
                             <input type='text' name='remarks' id='remarks' defaultValue='KDFW' required />
+
+                            </div>
                         </div>
-                        <div>
-                            <button type='submit'>Add Observation</button>
+
+
+                        <div className='login-r'>
+                            <div className='login-c'></div>
+                            <div className='login-c'>
+                            <button className='addBtn' type='submit'>Add Observation</button>
+                        </div>
                         </div>
 
                     </form>

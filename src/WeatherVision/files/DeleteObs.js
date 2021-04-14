@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WvMenu from './WvMenu';
-import config from '../../ApiConfig'
+import config from '../../ApiConfig';
+import './css/DelObs.css';
 
 class DeleteObs extends Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class DeleteObs extends Component {
                     throw error
                 })
             }
-            //return res.json()
+          
         })
         .catch (error => {
             console.log('error at Delete Obs Line 52')
@@ -70,15 +71,13 @@ class DeleteObs extends Component {
 
         return(
 
-            <div>
-                <p>
-                    
-                </p>
+            <div className='delText'>
+
                 {deletedStatus}
                 <form onSubmit={this.DeleteObsBtn}>
 
-                    <div>
-                        <button type='submit'>Delete</button>
+                    <div className='del-1'>
+                        <button className='delbtn' type='submit'>Delete</button>
                     </div>
 
                 </form>

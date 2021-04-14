@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Header from './Header';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-test('renders Header Component', () => {
-  render(<Header />);
-  const linkElement = screen.getByText(/Weather Vision/i);
-  expect(linkElement).toBeInTheDocument();
+it('Renders without Crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(
+  <Header />, 
+  div
+  );
+  ReactDOM.unmountComponentAtNode(div);
 });

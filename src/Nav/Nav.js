@@ -1,5 +1,5 @@
 import react, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, BrowserRouter } from 'react-router-dom';
 import './Nav.css';
 import HamNav from './menu_ham.jpg';
 
@@ -7,6 +7,7 @@ class Nav extends Component {
     render() {
         return (
             <div className='navBox'>
+                
                 <ul className='menubg'>
                 <div className='navShow-a'>
                     <nav>
@@ -47,6 +48,7 @@ class Nav extends Component {
 
                 </div>
                 </ul>
+               
             </div>
         )
     }

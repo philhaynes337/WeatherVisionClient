@@ -55,27 +55,42 @@ class Login extends Component {
         const { error } = this.state;
         return (
             <div>
+
                 <p>
                     {error}
                 </p>
                 <form onSubmit={this.handSubmitTokenAuth}>
-                    <section>
-                        Login:
-                        <div>
-                            <label htmlFor='user_name'>
-                                User Name:
-                            </label>
-                            <input type='text' id='user_name' name='user_name' />
+                    <section className='login'>
+                        
+                        <div className='login-r'>
+                            <div className='login-c'>
+
+                                    <label htmlFor='user_name'>
+                                        User Name:
+                                    </label>
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' id='user_name' name='user_name' placeholder='User Name' />
+
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor='user_password'>
-                                Password:
-                            </label>
-                            <input type='password' id='user_password' name='user_password' />
+                        <div className='login-r'>
+                            <div className='login-c'>
+                                    <label htmlFor='user_password'>
+                                        Password:
+                                    </label>
+                            </div>
+                        <div className='login-c'>
+
+                            <input type='password' id='user_password' name='user_password' placeholder='Password' />
                         </div>
-                        <div>
-                        <button type='submit'>Login</button>
                         </div>
+                        <div className='login-r'>
+                        <div className='login-c'></div>
+                            <div className='login-c'>
+                                <button type='submit'>Login</button>
+                            </div>
+                            </div>
                     </section>
                 </form>
             </div>

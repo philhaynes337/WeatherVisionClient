@@ -10,14 +10,16 @@ import Nav from './Nav/Nav';
 
 ReactDOM.render(
   <React.StrictMode>
+    
     <BrowserRouter>
       
-        <Header />
-          <Nav />
-           <App />
-        <Footer />
-      
-    </BrowserRouter>
+          <Header />
+           <Nav />
+            <App />
+          <Footer />
+        
+      </BrowserRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -69,30 +69,61 @@ class Create extends Component {
     render() {
         return (
             <div>
+                <h2>Create New Account</h2>
+
                 <form onSubmit={this.handleSubmit}>
-                    <section>
-                        <div>
-                            <label htmlFor='user_email'>
-                                E-Mail:
-                            </label>
-                            <input type='text' name='user_email' id='user_email' defaultValue='E-Mail' required />
+                    <section className='create'>
+
+                        <div className='create-r'>
+                            <div className='create-c'>
+
+                                <label htmlFor='user_email'>
+                                    E-Mail:
+                                </label>
+                            </div>
+
+                            <div className='login-c'>
+                                <input type='text' name='user_email' id='user_email' defaultValue='E-Mail' required />
+                            </div>
+
                         </div>
-                       
-                        <div>
-                            <label htmlFor='user_name'>
-                                User Name:
-                            </label>
-                            <input type='text' name='user_name' id='user_name' defaultValue='User Name' required />
+
+                        <div className='create-r'>
+                            <div className='create-c'>
+
+                                <label htmlFor='user_name'>
+                                    User Name:
+                                </label>
+
+                            </div>
+                            <div className='create-c'>
+                                <input type='text' name='user_name' id='user_name' defaultValue='User Name' required />
+                        
                         </div>
-                        <div>
-                            <label htmlFor='user_password'>
-                                Password:
-                            </label>
-                            <input type='text' name='user_password' id='user_password' defaultValue='Password' required />
                         </div>
-                        <div>
-                            <button type='submit'>Create User</button>
+
+                        <div className='create-r'>
+                            <div className='create-c'>
+
+                                <label htmlFor='user_password'>
+                                    Password:
+                                </label>
+                            </div>
+                            <div className='create-c'>
+                                <input type='password' name='user_password' id='user_password' defaultValue='Password' required />
+                            </div>
                         </div>
+                        <div className='create-r'>
+
+                        <div className='create-c'></div>
+
+                            <div className='create-c'>
+
+                                <button type='submit'>Create User</button>
+
+                            </div>
+                        </div>
+                        
                     </section>
                 </form>
             </div>

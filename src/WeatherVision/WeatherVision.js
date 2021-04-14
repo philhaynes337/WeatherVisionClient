@@ -38,14 +38,6 @@ class WeatherVision extends Component {
             }
         }
 
-        // const optionsPost = {
-        //     method: 'POST',
-        //     body: JSON.stringify(userinfo),
-        //     headers: {
-        //         'content-type': 'application/json',
-        //         'Authorization': `Bear ${config.API_KEY}`,
-        //     }
-        // }
 
         fetch(userUrl, options)
             .then(res => res.json())

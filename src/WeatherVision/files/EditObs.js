@@ -10,7 +10,7 @@ class EditObs extends Component {
             error: null,
             updated: '',
             display: 'noShow',
-            updateButton: 'show',
+            updateButton: 'show showStyle',
             buttonText: 'Update',
             obs_date_time: [],
             icao: [],
@@ -105,56 +105,134 @@ const showUpdateButton = this.state.updateButton;
         return(
             <div>
                 {this.state.updated}
-               <form onSubmit={this.UpdateObsBtn}>
+
                     <div className={showUpdateTable}>
+                    <form name='Update Obs' onSubmit={this.UpdateObsBtn}>
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Date/Time:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='obs_date_time' id='obs_date_time' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Location:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='icao' id='icao' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Wind:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='wind' id='wind' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Visibility:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='vis' id='vis' />
+
+
+                            </div>
+                    </div>
+
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Clouds:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='clouds' id='clouds' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Weather:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='wx' id='wx' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Temperature:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='tmp' id='tmp' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Dew Point:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='dp' id='dp' />
+
+
+                            </div>
+                    </div>
+
+                    <div className='login-r'>
+                            <div className='login-c'>
+                            Remarks:
+
+                            </div>
+                            <div className='login-c'>
+                            <input type='text' name='remarks' id='remarks' />
+
+
+                            </div>
+                    </div>
+
+
                         <div>
-                                Date/Time:
-                                <input type='text' name='obs_date_time' id='obs_date_time' />
-                        </div>
-                        <div>
-                                Location:
-                                <input type='text' name='icao' id='icao' />
-                        </div>
-                        <div>
-                                Wind:
-                                <input type='text' name='wind' id='wind' />
-                        </div>
-                        <div>
-                                Visibility:
-                                <input type='text' name='vis' id='vis' />
-                         </div>
-                         <div>
-                                Clouds:
-                                <input type='text' name='clouds' id='clouds' />
-                         </div>
-                         <div>
-                                Weather:
-                                <input type='text' name='wx' id='wx' />
-                         </div>
-                         <div>
-                                Temperature:
-                                <input type='text' name='tmp' id='tmp' />
-                         </div>
-                         <div>
-                                Dew Point:
-                                <input type='text' name='dp' id='dp' />
-                         </div>
-                         <div>
-                                Remarks:
-                                <input type='text' name='remarks' id='remarks' />
-                         </div>
-                        <div>
-                                <button type='submit'>Submit to Server</button>
-                                
-                                <form>
-                                <button type='cancel' onClick={this.handleCancel}>Cancel</button>
+                                <button type='submit' className='submitServer'>Submit to Server</button>
+                                </div>
                                 </form>
+                                <br />
+                                <br />
+                                <form>
+                                <button type='cancel' className='submitCancel' onClick={this.handleCancel}>Cancel</button>
+                                </form>
+                        
                         </div>
-                        </div>
-                   </form>
+                   
                   
                    <div className={showUpdateButton}>
-                       <form onSubmit={this.UpdateObsBtnStage}>
+                       <form name='Update Submit Obs' onSubmit={this.UpdateObsBtnStage}>
                            <button type='submit'>Update</button>
                        </form>
                    </div>

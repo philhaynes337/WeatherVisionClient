@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Login from './Login';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-test('renders Nav Component', () => {
-  render(<Login />);
-  const linkElement = screen.getByText(/Login/i);
-  expect(linkElement).toBeInTheDocument();
+it('Renders without Crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(
+  <Login />, 
+  div
+  );
+  ReactDOM.unmountComponentAtNode(div);
 });

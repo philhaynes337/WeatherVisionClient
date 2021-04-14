@@ -1,5 +1,5 @@
 .addobs-a {
-    width: 350px;
+    width: 450px;
     height: auto;
     margin-top: 5px;
     padding: 15px;
@@ -19,4 +19,8 @@
     padding: 25px;
     font-weight: bold;
     color: red;
+}
+
+.addBtn {
+    float: right;
 }

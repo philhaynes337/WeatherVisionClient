@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import Create from './Create';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-test('renders Create Component', () => {
-  render(<Create />);
-  const linkElement = screen.getByText(/Create/i);
-  expect(linkElement).toBeInTheDocument();
+it('Renders without Crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(
+  <Create />, 
+  div
+  );
+  ReactDOM.unmountComponentAtNode(div);
 });
